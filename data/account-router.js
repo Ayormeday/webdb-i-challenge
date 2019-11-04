@@ -32,9 +32,9 @@ router.get('/:id', async (req, res) => {
           name,
           budget
         })
-      res.status(201).json('New Account record got created with an id of ' + result[0]);
+      res.status(201).json('New Account record created with an id of ' + result[0]);
     } catch (error) {
-      res.status(500).json({ message: 'this went wrong while trying to insert this account record ' + error.message });
+      res.status(500).json({ message: 'Error trying to insert account record ' + error.message });
     }
   });
 
