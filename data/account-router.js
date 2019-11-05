@@ -57,7 +57,7 @@ router.put("/:id", (req, res) => {
     })
     .then(affectedRecords => {
       console.log(affectedRecords);
-      res.json(affectedRecords + " records got changed!");
+      res.json(affectedRecords + " records was updated!");
     })
     .catch(error => {
       res.status(500).json({ message: "this went wrong: " + error.message });

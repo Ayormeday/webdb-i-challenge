@@ -1,14 +1,14 @@
-const express = require('express');
+const express = require("express");
 
-const AccountsRouter = require('./data/account-router.js');
+const AccountsRouter = require("./data/account-router.js");
 
 const server = express();
 
 server.use(express.json());
-server.use('/api/accounts', AccountsRouter);
+server.use("/api/accounts", AccountsRouter);
 
-server.get('/', (req, res) => {
-  res.send('<h3>DB Helpers with knex</h3>');
+server.get("/", (req, res) => {
+  res.send("<h3>DB Helpers with knex</h3>");
 });
 
 module.exports = server;
